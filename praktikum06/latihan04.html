@@ -28,6 +28,20 @@
 
             document.getElementById("hasil_pengurangan").innerHTML = hasil;
         }
+
+        function login(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if(username == "ardith" && password == "1"){
+                alert("Login sukses");
+                return window.location.href = "latihan01.html";
+                
+            } else {
+                return alert("Login gagal")
+            }
+        }
+
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,10 +49,11 @@
 </head>
 <body>
     <form>
-        Bilangan 1: <input type="text" id="bil1"/>
-        Bilangan 2: <input type="text" id="bil2"/>
-        <input type="button" value="penjumlahan" onclick="penjumlahan()">
-        <input type="button" value="pengurangan" onclick="pengurangan()">
+        Bilangan 1: <input type="text" id="username"/>
+        Bilangan 2: <input type="text" id="password"/>
+        <input type="button" value="login" onclick="login()">
+        <!-- <input type="button" value="penjumlahan" onclick="penjumlahan()"> -->
+        <!-- <input type="button" value="pengurangan" onclick="pengurangan()"> -->
         <h1 id="hasil_penjumlahan"></h1>
         <h1 id="hasil_pengurangan"></h1>
     </form>
